@@ -1,22 +1,20 @@
-
 const app = Vue.createApp({
-  data() {
-
-		return {
-      enteredGoalValue: "",
-      goals: [],
-    };
-
-  },
-  methods: {
-    addGoal() {
-
-      this.goals.push(this.enteredGoalValue);
+    data() {
+        return {
+            playerHealth: 100,
+            monsterHealth: 100,
+            currentRound: 0,
+            winner: null,
+            logMessages: []
+            
+        };
     },
-    removeGoal(index) {
-      this.goals.splice(index, 1);
-    },
-  },
+    methods: {
+        attackMonster() {
+            Math.random() * (12-5) + 5;
+
+    }
 });
 
-app.mount("#user-goals");
+
+app.mount('#game');
